@@ -106,7 +106,7 @@ class Trainer():
 
                     if self.args.save_results:
                         #self.ckp.save_results(filename, save_list, scale)
-                        self.ckp.save_results(filename, save_list, scale)
+                        self.ckp.save_results_nopostfix(filename, save_list, scale)
 
                 self.ckp.log[-1, idx_scale] = eval_acc / len(self.loader_test)
                 best = self.ckp.log.max(0)
